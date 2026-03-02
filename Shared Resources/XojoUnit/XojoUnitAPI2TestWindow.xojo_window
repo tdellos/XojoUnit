@@ -10,6 +10,7 @@ Begin DesktopWindow XojoUnitAPI2TestWindow
    HasFullScreenButton=   False
    HasMaximizeButton=   False
    HasMinimizeButton=   True
+   HasTitleBar     =   True
    Height          =   600
    ImplicitInstance=   True
    MacProcID       =   0
@@ -1065,9 +1066,9 @@ End
 		  TestToolbar1.StopButton.Enabled = True
 		  TestToolbar1.ExportButton.Enabled = False
 		  
-		  Controller.Start
-		  ResetTestGroupList
-		  UpdateSummary
+		  self.Controller.Start
+		  self.ResetTestGroupList
+		  self.UpdateSummary
 		End Sub
 	#tag EndMethod
 
@@ -1692,6 +1693,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="HasTitleBar"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="MinimumWidth"
 		Visible=true
